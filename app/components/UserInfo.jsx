@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import UserButtons from "./userButtons";
+import UserButtons from "./UserButtons";
 
 export default function UserInfo({ user }) {
   const cookieStore = cookies();
