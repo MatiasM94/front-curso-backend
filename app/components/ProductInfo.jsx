@@ -1,6 +1,6 @@
 import Image from "next/image";
 import BuyButtons from "./buyButtons";
-import getCookies from "../utils/getCookies";
+import getCookies from "@/app/utils/getCookies";
 
 export default function ProductInfo({ productDetail }) {
   const { title, description, price, thumbnails, stock, category, owner, _id } =

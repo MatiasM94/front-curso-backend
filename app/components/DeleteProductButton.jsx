@@ -1,8 +1,8 @@
 "use client";
 
 import { useContext } from "react";
-import deleteProductInCartFetch from "../utils/deleteProductIncartFetch";
-import { CartContext } from "../context/cart.context";
+import deleteProductInCartFetch from "@/app/utils/deleteProductIncartFetch";
+import { CartContext } from "@/app/context/cart.context";
 
 export default function DeleteProductButton({ pid, cookie, cid }) {
   const { cartUpdate, setCartUpdate } = useContext(CartContext);

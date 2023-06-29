@@ -1,5 +1,5 @@
 import getCookies from "@/app/utils/getCookies";
-import ProfileInfo from "../../components/profile";
+import ProfileInfo from "@/app/components/profile";
 
 export async function getProfile() {
   const tokenName = "authToken";

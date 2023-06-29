@@ -1,8 +1,8 @@
 "use client";
 
 import { useContext, useState } from "react";
-import updateProductInCartFetch from "../utils/updateProductInCartFetch";
-import { CartContext } from "../context/cart.context";
+import updateProductInCartFetch from "@/app/utils/updateProductInCartFetch";
+import { CartContext } from "@/app/context/cart.context";
 
 export default function QuantityButtons({ product, cookie, cid }) {
   const { cartUpdate, setCartUpdate } = useContext(CartContext);

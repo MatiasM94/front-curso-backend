@@ -1,9 +1,9 @@
 "use client";
 
 import { useContext, useEffect } from "react";
-import PurchaseButton from "../components/PurchaseButton";
+import PurchaseButton from "@/app/components/PurchaseButton";
 import { useRouter } from "next/navigation";
-import { CartContext } from "../context/cart.context";
+import { CartContext } from "@/app/context/cart.context";
 
 export default function CartContainer({ children, totalPrice, cookie, cid }) {
   const { cartUpdate } = useContext(CartContext);

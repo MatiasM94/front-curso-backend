@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
-import ProductList from "../../containers/productList.Container";
-import ButtonPaginacion from "../../components/paginationButtons";
+import ProductList from "@/app/containers/productList.Container";
+import ButtonPaginacion from "@/app/components/paginationButtons";
 
 async function getData({ page = 1 }) {
   const cookieStore = cookies();

@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
-import getToken from "./utils/currentFetch";
-import Login from "./components/login";
+import getToken from "@/app/utils/currentFetch";
+import Login from "@/app/components/login";
 
 export default async function Ecommerce() {
   const tokenName = "authToken";

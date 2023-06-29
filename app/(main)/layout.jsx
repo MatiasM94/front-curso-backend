@@ -1,8 +1,8 @@
-import NavBarContainer from "../containers/navBar.Container";
+import NavBarContainer from "@/app/containers/navBar.Container";
 import { redirect } from "next/navigation";
-import getToken from "../utils/currentFetch";
-import CartProvider from "../context/cart.context";
-import UserProvider from "../context/user.context";
+import getToken from "@/app/utils/currentFetch";
+import CartProvider from "@/app/context/cart.context";
+import UserProvider from "@/app/context/user.context";
 
 export default async function MainLayout({ children }) {
   const tokenName = "authToken";

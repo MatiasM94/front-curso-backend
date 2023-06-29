@@ -1,4 +1,4 @@
-import Card from "../components/Card";
+import Card from "@/app/components/Card";
 
 export default function ProductList({ products }) {
   const { docs } = products.payload;

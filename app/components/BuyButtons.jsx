@@ -1,10 +1,10 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import postCartFetch from "../utils/postCartFetch";
-import patchCartFetch from "../utils/patchCartFetch";
+import postCartFetch from "@/app/utils/postCartFetch";
+import patchCartFetch from "@/app/utils/patchCartFetch";
 import { useContext } from "react";
-import { CartContext } from "../context/cart.context";
+import { CartContext } from "@/app/context/cart.context";
 
 export default function BuyButtons({ cookies, pid }) {
   const router = useRouter();

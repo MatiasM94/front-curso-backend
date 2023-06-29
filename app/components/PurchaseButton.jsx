@@ -1,6 +1,6 @@
 "use client";
 
-import purchaseFetch from "../utils/purchaseFetch";
+import purchaseFetch from "@/app/utils/purchaseFetch";
 
 export default function PurchaseButton({ cookie, totalPrice, cid }) {
   const handlePurchase = async () => {

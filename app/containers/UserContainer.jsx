@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext, useEffect } from "react";
-import { UserContext } from "../context/user.context";
+import { UserContext } from "@/app/context/user.context";
 import { useRouter } from "next/navigation";
 
 export default function UserContainer({ children }) {

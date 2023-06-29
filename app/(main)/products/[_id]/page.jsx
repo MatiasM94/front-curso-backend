@@ -1,4 +1,3 @@
-import ProductInfo from "@/app/components/ProductInfo";
 import ProductDetail from "@/app/containers/productDetail.Container";
 import { cookies } from "next/headers";
 

@@ -1,4 +1,4 @@
-import MailValidatorForm from "../components/MailValidatorForm";
+import MailValidatorForm from "@/app/components/MailValidatorForm";
 
 export default function ForgotPassword() {
   return (

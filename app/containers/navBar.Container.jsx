@@ -1,5 +1,5 @@
-import { getProfile } from "../(main)/profile/page";
-import NavBar from "../components/navbar";
+import { getProfile } from "@/app/(main)/profile/page";
+import NavBar from "@/app/components/navbar";
 
 export default async function NavBarContainer() {
   const profile = await getProfile();

@@ -1,9 +1,9 @@
 "use client";
 
 import { useContext } from "react";
-import updateRoleFetch from "../utils/updateRoleFetch";
-import { UserContext } from "../context/user.context";
-import deleteUserFetch from "../utils/deleteUserFetch";
+import updateRoleFetch from "@/app/utils/updateRoleFetch";
+import { UserContext } from "@/app/context/user.context";
+import deleteUserFetch from "@/app/utils/deleteUserFetch";
 
 export default function UserButtons({ userDelete, uid, cookie }) {
   const { userChange, setUserChange } = useContext(UserContext);
