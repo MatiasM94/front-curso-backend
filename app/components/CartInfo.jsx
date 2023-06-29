@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import QuantityButtons from "./QuantityButtons";
-import DeleteProductButton from "./deleteProductButton";
+import DeleteProductButton from "./DeleteProductButton";
 
 export default async function CartInfo({ product, cookie, cid }) {
   return (

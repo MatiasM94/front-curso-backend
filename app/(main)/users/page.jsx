@@ -1,4 +1,4 @@
-import UserInfo from "@/app/components/userInfo";
+import UserInfo from "@/app/components/UserInfo";
 import UserContainer from "@/app/containers/UserContainer";
 import { cookies } from "next/headers";
 

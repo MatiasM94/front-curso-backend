@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BuyButtons from "./buyButtons";
+import BuyButtons from "./BuyButtons";
 import getCookies from "@/app/utils/getCookies";
 
 export default function ProductInfo({ productDetail }) {
