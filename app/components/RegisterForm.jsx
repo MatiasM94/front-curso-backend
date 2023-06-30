@@ -30,7 +30,7 @@ export default function RegisterForm() {
         validationSchema={validationRegister}
         onSubmit={async (values, actions) => {
           const response = await fetch(
-            "http://localhost:3000/api/users/register",
+            "https://ecommerce-matias.up.railway.app/api/users/register",
             {
               method: "POST",
               headers: {

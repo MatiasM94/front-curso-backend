@@ -10,7 +10,7 @@ export default async function updateProductInCartFetch(
 
   try {
     const response = await fetch(
-      `http://localhost:3000/api/carts/${cid}/product/${pid}`,
+      `https://ecommerce-matias.up.railway.app/api/carts/${cid}/product/${pid}`,
       {
         method: "PATCH",
         credentials: "include",

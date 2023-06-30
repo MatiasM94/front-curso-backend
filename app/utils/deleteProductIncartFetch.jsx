@@ -4,7 +4,7 @@ export default async function deleteProductInCartFetch(pid, cookies, cid) {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/api/carts/${cid}/product/${pid}`,
+      `https://ecommerce-matias.up.railway.app/${cid}/product/${pid}`,
       {
         method: "DELETE",
         credentials: "include",

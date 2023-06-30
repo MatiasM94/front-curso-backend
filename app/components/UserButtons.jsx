@@ -5,7 +5,7 @@ import updateRoleFetch from "@/app/utils/updateRoleFetch";
 import { UserContext } from "@/app/context/user.context";
 import deleteUserFetch from "@/app/utils/deleteUserFetch";
 
-export default function UserButtons({ userDelete, uid, cookie }) {
+export default function UserButtons({ uid, cookie }) {
   const { userChange, setUserChange } = useContext(UserContext);
 
   const handleDelete = async () => {

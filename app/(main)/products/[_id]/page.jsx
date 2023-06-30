@@ -9,15 +9,18 @@ async function getProduct(params) {
   const cookie = `${theme.name}=${theme.value}`;
   const { _id } = params;
   try {
-    const response = await fetch(`http://localhost:3000/api/products/${_id}`, {
-      method: "GET",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-        Cookie: `${cookie};path=/;expires=Session`,
-      },
-      cache: "no-store",
-    });
+    const response = await fetch(
+      `https://ecommerce-matias.up.railway.app/api/products/${_id}`,
+      {
+        method: "GET",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          Cookie: `${cookie};path=/;expires=Session`,
+        },
+        cache: "no-store",
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Failed to fetch data");

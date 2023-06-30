@@ -4,7 +4,7 @@ export default async function updateRoleFetch(uid, cookies) {
   try {
     console.log(uid);
     const response = await fetch(
-      `http://localhost:3000/api/users/premium/${uid}`,
+      `https://ecommerce-matias.up.railway.app/api/users/premium/${uid}`,
       {
         method: "PATCH",
         credentials: "include",

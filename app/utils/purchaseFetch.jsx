@@ -5,7 +5,7 @@ export default async function purchaseFetch(cookies, totalPrice, cid) {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/api/carts/${cid}/purchase`,
+      `https://ecommerce-matias.up.railway.app/${cid}/purchase`,
       {
         method: "POST",
         credentials: "include",

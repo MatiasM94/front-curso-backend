@@ -37,7 +37,7 @@ export default function navBar({ profile }) {
     pathWithoutSlash.charAt(0).toUpperCase() + pathWithoutSlash.slice(1);
 
   const handlerLogout = () => {
-    router.push("http://localhost:3000/api/auth");
+    router.push("https://ecommerce-matias.up.railway.app/api/auth");
   };
 
   return (
