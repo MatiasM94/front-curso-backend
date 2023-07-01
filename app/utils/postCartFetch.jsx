@@ -16,7 +16,6 @@ export default async function postCartFetch(pid, cookies) {
       },
       body: JSON.stringify(product),
     });
-    console.log(response);
     if (!response.ok) {
       throw new Error("Failed to fetch data");
     }

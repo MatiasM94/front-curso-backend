@@ -4,15 +4,18 @@ export default async function purchaseFetch(cookies, totalPrice, cid) {
   const body = { priceFinally: totalPrice };
 
   try {
-    const response = await fetch(`http://localhost:3000/${cid}/purchase`, {
-      method: "POST",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-        Cookie: `${token};path=/;expires=Session`,
-      },
-      body: JSON.stringify(body),
-    });
+    const response = await fetch(
+      `http://localhost:3000/api/carts/${cid}/purchase`,
+      {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          Cookie: `${token};path=/;expires=Session`,
+        },
+        body: JSON.stringify(body),
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Failed to fetch data");
