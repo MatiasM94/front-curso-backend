@@ -7,18 +7,15 @@ export async function getProfile() {
 
   if (error) return error;
 
-  const response = await fetch(
-    "https://ecommerce-matias.up.railway.app/api/auth/current",
-    {
-      method: "GET",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-        Cookie: `${cookie};path=/;expires=Session`,
-      },
-      next: { revalidate: 600 },
-    }
-  );
+  const response = await fetch("http://localhost:3000/api/auth/current", {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+      Cookie: `${cookie};path=/;expires=Session`,
+    },
+    next: { revalidate: 600 },
+  });
 
   const data = await response.json();
   return { data };

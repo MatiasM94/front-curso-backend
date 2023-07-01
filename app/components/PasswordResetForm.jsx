@@ -22,16 +22,13 @@ export default function PasswordResetForm() {
       initialValues={initialValues}
       validationSchema={validationRegister}
       onSubmit={async (values, actions) => {
-        const response = await fetch(
-          "https://ecommerce-matias.up.railway.app/api/mail",
-          {
-            method: "POST",
-            headers: {
-              "content-Type": "application/json",
-            },
-            body: JSON.stringify(values),
-          }
-        );
+        const response = await fetch("http://localhost:3000/api/mail", {
+          method: "POST",
+          headers: {
+            "content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        });
 
         const data = await response.json();
         actions.setSubmitting(false);

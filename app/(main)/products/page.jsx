@@ -10,7 +10,7 @@ async function getData({ page = 1 }) {
   const cookie = `${theme.name}=${theme.value}`;
   try {
     const response = await fetch(
-      `https://ecommerce-matias.up.railway.app/api/products?page=${page}`,
+      `http://localhost:3000/api/products?page=${page}`,
       {
         method: "GET",
         credentials: "include",

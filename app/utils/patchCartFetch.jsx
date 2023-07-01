@@ -5,18 +5,15 @@ export default async function patchCartFetch(pid, cookies, cid) {
   const product = { pid: pid };
 
   try {
-    const response = await fetch(
-      `https://ecommerce-matias.up.railway.app/api/carts/${cid}`,
-      {
-        method: "PATCH",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-          Cookie: `${token};path=/;expires=Session`,
-        },
-        body: JSON.stringify(product),
-      }
-    );
+    const response = await fetch(`http://localhost:3000/api/carts/${cid}`, {
+      method: "PATCH",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+        Cookie: `${token};path=/;expires=Session`,
+      },
+      body: JSON.stringify(product),
+    });
 
     if (!response.ok) {
       throw new Error("Failed to fetch data");

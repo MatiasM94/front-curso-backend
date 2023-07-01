@@ -40,7 +40,7 @@ export default function Login() {
         onSubmit={async (values, actions) => {
           try {
             const response = await fetch(
-              "https://ecommerce-matias.up.railway.app/api/auth/login",
+              "http://localhost:3000/api/auth/login",
               {
                 method: "POST",
                 headers: {
