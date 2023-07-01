@@ -1,5 +1,6 @@
 export default async function patchCartFetch(pid, cookies, cid) {
   if (cookies.error) return cookies;
+
   const token = cookies.cookie;
   const product = { pid: pid };
 

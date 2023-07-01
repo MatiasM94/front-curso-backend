@@ -1,13 +1,16 @@
 export default async function postCartFetch(pid, cookies) {
   if (cookies.error) return cookies;
+
   const token = cookies.cookie;
-  const product = { pid: pid };
+
+  const product = { pid };
 
   try {
     const response = await fetch(
       "https://ecommerce-matias.up.railway.app/api/carts/",
       {
         method: "POST",
+        mode: "cors",
         credentials: "include",
         headers: {
           "Content-Type": "application/json",
@@ -16,7 +19,7 @@ export default async function postCartFetch(pid, cookies) {
         body: JSON.stringify(product),
       }
     );
-
+    console.log(response);
     if (!response.ok) {
       throw new Error("Failed to fetch data");
     }
