@@ -31,7 +31,7 @@ export async function POST(request) {
     const data = await response.json();
 
     const res = NextResponse.json({ data });
-
+    res.cookies.delete("cartId");
     return res;
   } catch (error) {
     console.log(error);
