@@ -9,6 +9,7 @@ export const fetchCache = "force-no-store";
 async function getCart() {
   const tokenName = "cartId";
   const { payload } = await getCartToken(tokenName);
+
   if (!payload) return { data: { products: [] } };
 
   const cookieStore = cookies();

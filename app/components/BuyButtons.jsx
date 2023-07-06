@@ -19,7 +19,7 @@ export default function BuyButtons({ cookies, pid }) {
     }
     const addProduct = await postCartFetch(pid, cookie);
 
-    const { _id } = addProduct.cartAdded;
+    const { _id } = addProduct.data.cartAdded;
     setCart(_id);
 
     router.push(`/cart`);
