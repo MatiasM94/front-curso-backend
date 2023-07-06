@@ -9,7 +9,7 @@ export default function PurchaseButton({ cookie, totalPrice, cid }) {
     const purchase = await purchaseFetch(cookie, totalPrice, cid);
     if (purchase.data.ticket) {
       setTimeout(() => {
-        router.push("/products");
+        router.push("/successfull");
       }, 2000);
     }
   };
