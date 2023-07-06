@@ -3,7 +3,7 @@ export default async function deleteProductInCartFetch(pid, cookies, cid) {
 
   try {
     const response = await fetch(
-      `http://localhost:8000/api/deletecart/${cid}/${pid}`,
+      `https://ecommerce-matias.vercel.app/api/deletecart/${cid}/${pid}`,
       {
         method: "DELETE",
         headers: {

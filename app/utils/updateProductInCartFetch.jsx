@@ -9,13 +9,16 @@ export default async function updateProductInCartFetch(
   const body = { quantity, cid, pid };
 
   try {
-    const response = await fetch("http://localhost:8000/api/updatecart", {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    });
+    const response = await fetch(
+      "https://ecommerce-matias.vercel.app/api/updatecart",
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Failed to fetch data");

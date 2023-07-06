@@ -4,13 +4,16 @@ export default async function patchCartFetch(pid, cookies, cid) {
   const product = { pid, cid };
 
   try {
-    const response = await fetch("http://localhost:8000/api/patchcart", {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(product),
-    });
+    const response = await fetch(
+      "https://ecommerce-matias.vercel.app/api/patchcart",
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Failed to fetch data");

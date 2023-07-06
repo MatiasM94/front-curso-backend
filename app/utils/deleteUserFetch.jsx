@@ -3,7 +3,7 @@ export default async function deleteUserFetch(uid, cookies) {
 
   try {
     const response = await fetch(
-      `http://localhost:8000/api/deleteuser/${uid}`,
+      `https://ecommerce-matias.vercel.app/api/deleteuser/${uid}`,
       {
         method: "DELETE",
         headers: {

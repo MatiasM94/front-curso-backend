@@ -3,13 +3,16 @@ export default async function purchaseFetch(cookies, totalPrice, cid) {
   const body = { priceFinally: totalPrice, cid };
 
   try {
-    const response = await fetch("http://localhost:8000/api/purchase", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    });
+    const response = await fetch(
+      "https://ecommerce-matias.vercel.app/api/purchase",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Failed to fetch data");
